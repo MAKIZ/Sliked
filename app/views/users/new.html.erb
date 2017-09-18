@@ -1,21 +1,33 @@
-<%= form_for(@user) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-
-  <%= f.label :occupation %>
-  <%= f.text_field :occupation %>
-
-  <%= f.label :location %>
-  <%= f.text_field :location %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.label :password_confirmation, "Confirmation" %>
-  <%= f.password_field :password_confirmation %>
-
-  <%= f.submit "Create my account" %>
-<% end %>
+<div class="container">
+  <div class="row signup-wrapper">
+    <div class="col-xs-12 col-md-6 mr-auto">
+      <h1>Sliked</h1>
+      <p>Raclette etsy activated charcoal, typewriter organic tbh kale chips freegan hot chicken drinking vinegar tumblr occupy. PBR&B snackwave pug, blue bottle fixie asymmetrical fam hot chicken ramps. </p>
+    </div>
+    <div class="col-xs-12 col-md-5">
+          <%= form_for(@user) do |f| %>
+          <div class="form-group">
+            <%= f.label :name, required: true, class: "col-form-label" %>
+            <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :email, required: true, class: "col-form-label" %>
+            <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :occupation, class: "col-form-label" %>
+            <%= f.text_field :occupation, class: "form-control", placeholder: "Occupation" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :location, class: "col-form-label" %>
+            <%= f.text_field :location, class: "form-control", placeholder: "Location" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password, required: true, class: "col-form-label" %>
+            <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+          </div>
+          <%= f.submit class: "btn btn-primary float-right", value: "Submit" %>
+        <% end %>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,25 @@
-<%= form_for :user, url: session_path do |f| %>
-<%= f.text_field :email, placeholder: 'Email', required: true %>
-<%= f.password_field :password, placeholder: 'password', required: true %>
-
-<%= submit_tag 'Sign in!' %>
-<% end %>
+<div class="container">
+  <div class="row signin-wrapper">
+    <div class="col-xs-12 col-md-6 mr-auto">
+      <h1>Sliked</h1>
+      <p>Raclette etsy activated charcoal, typewriter organic tbh kale chips freegan hot chicken drinking vinegar tumblr occupy. PBR&B snackwave pug, blue bottle fixie asymmetrical fam hot chicken ramps. </p>
+    </div>
+    <div class="col-xs-12 col-md-5">
+      <!-- <form> -->
+      <%= form_for :user, url: session_path do |f| %>
+      <div class="form-group">
+          <%= f.label :email, placeholder: 'Email', required: true %>
+          <%= f.email_field :email, class: "form-control", placeholder: "Email"%>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+          <%= f.label :password, placeholder: 'Password', required: true %>
+          <%= f.password_field :password, class: "form-control", placeholder: "Password"%>
+      </div>
+      <%= f.submit class: "btn btn-primary float-right", value: "Submit" %>
+      <small class="form-text text-muted">Forgot Password?</small>
+      <% end %>
+        <!-- </form> -->
+    </div>
+  </div>
+</div>
