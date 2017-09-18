@@ -4,7 +4,10 @@
 </header>
 
 <% @posts.each do |post| %>
-  <%= post.name %>
-  <%= post.description %>
-  <%= post.photo %>
+  <p><%= post.name %></p>
+  <p><%= post.description %></p>
+  <p><%= post.photo %></p>
+  <br>
+  <p><%= link_to  "more info", post %></p>
+
 <% end %>
