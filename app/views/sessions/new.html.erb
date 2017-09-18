@@ -1,0 +1,6 @@
+<%= form_for :user, url: session_path do |f| %>
+<%= f.text_field :email, placeholder: 'Email', required: true %>
+<%= f.password_field :password, placeholder: 'password', required: true %>
+
+<%= submit_tag 'Sign in!' %>
+<% end %>
