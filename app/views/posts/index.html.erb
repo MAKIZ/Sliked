@@ -2,3 +2,9 @@
   <h1 class="display-2">THE MOST LIKE</h1>
   <p class="lead">Only the best post with great content hand-picked by the community</p>
 </header>
+
+<% @posts.each do |post| %>
+  <%= post.name %>
+  <%= post.description %>
+  <%= post.photo %>
+<% end %>
