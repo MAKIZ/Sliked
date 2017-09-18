@@ -1,22 +1,22 @@
 class PostsController < ApplicationController
-  def new
-  end
-
-  def edit
+  def index
   end
 
   def show
   end
 
-  def index
+  def edit
   end
 
-  def destroy
+  def new
+  end
+
+  def create
   end
 
   def update
   end
 
-  def create
+  def destroy
   end
 end
