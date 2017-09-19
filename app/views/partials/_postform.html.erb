@@ -7,12 +7,11 @@
       <p>Raclette etsy activated charcoal, typewriter organic tbh kale chips freegan hot chicken drinking vinegar tumblr occupy. PBR&B snackwave pug, blue bottle fixie asymmetrical fam hot chicken ramps. </p>
     </div>
     <div class="col-xs-12 col-md-5">
-      <!-- <form> -->
-      <%= form_for @post do |f| %>
+      <%= form_for @post, html: { multipart: true } do |f| %>
       <div class="form-group">
-              <label for="exampleFormControlFile1">Image</label>
-              <input type="file" class="form-control-file" id="exampleFormControlFile1">
-            </div>
+          <%= f.label :postimage, required: true %>
+          <%= f.file_field :postimage %>
+      </div>
       <div class="form-group">
           <%= f.label :Title, required: true %>
           <%= f.text_field :name, class: "form-control", placeholder: "Title"%>
@@ -23,7 +22,6 @@
       </div>
       <%= f.submit class: "btn btn-primary float-right", value: "Submit" %>
       <% end %>
-        <!-- </form> -->
     </div>
   </div>
 </div>

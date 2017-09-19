@@ -7,7 +7,7 @@
   <div class="card-columns">
     <% @posts.each do |post| %>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <%= image_tag post.postimage.url, class: "img-fluid d-block mx-auto" %>
       <div class="card-body">
         <%= link_to  "#{post.name}", post, class: "card-title" %>
         <p class="card-text"><%= post.description %></p>

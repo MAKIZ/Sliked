@@ -31,7 +31,11 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
+# paperclip
+gem "paperclip", "~> 5.0.0"
 # gem 'redis', '~> 3.0'
+# Store your files using Amazon's S3 service
+gem 'aws-sdk', '~> 2.3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
