@@ -2,3 +2,20 @@
 <p><%= @user.email %></p>
 <p><%= @user.occupation %></p>
 <p><%= @user.location %></p>
+
+<div class="container pt-5">
+    <div class="card-columns">
+      <% @user.posts.each do |post| %>
+      <div class="card">
+        <%= image_tag post.postimage.url, class: "img-fluid d-block mx-auto" %>
+        <div class="card-body">
+          <%= link_to  "#{post.name}", post, class: "card-title" %>
+          <p class="card-text"><%= post.description %></p>
+          <hr>
+          <small><%= post.user.name %></small>
+  
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>

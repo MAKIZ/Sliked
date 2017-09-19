@@ -12,7 +12,8 @@
         <%= link_to  "#{post.name}", post, class: "card-title" %>
         <p class="card-text"><%= post.description %></p>
         <hr>
-        <small><%= post.user_id %></small>
+        <small><%= post.user.name %></small>
+
       </div>
     </div>
     <% end %>
