@@ -78,6 +78,14 @@
             </div>
               <button type="submit" class="btn btn-primary float-right btn-sm">Submit</button>
               <small>160</small>
+              <div class="row">
+                <% if current_user %>
+                  <div class="flex-end">
+                    <%= link_to "edit", edit_post_path(@post) %>
+                    <%= link_to "delete", post_path(@post), method: :delete %>
+                  </div>
+                <% end %>
+              </div>
           </form>
         </div>
       </div>
@@ -114,5 +122,3 @@
     </div>
   </div>
 </div>
-<%= link_to "edit", edit_post_path(@post) %>
-<%= link_to "delete", post_path(@post), method: :delete %>
