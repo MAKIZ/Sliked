@@ -27,7 +27,13 @@ padding: 60px 50px;
 }
 
 //jumbotron
-.humbotron {
+.humbotron-user-info {
+  background-color: rgb(251, 250, 250);
+  padding: 30px 0;
+  justify-content: center;
+}
+
+.humbotron-most-like {
   background-color: rgb(251, 250, 250);
   padding: 30px 0;
   justify-content: center;
@@ -77,4 +83,16 @@ padding: 60px 50px;
   border-radius: 50%;
   background-color: gainsboro;
   margin: 0 auto;
+}
+
+// link color
+.card-title  {
+  color: rgb(0, 0, 0);
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.card-text {
+  color: rgb(60, 60, 60);
+  font-size: .7rem;
 }
