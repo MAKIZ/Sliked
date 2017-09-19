@@ -1,6 +1,72 @@
-<p><%= @post.name %></p>
-<p><%= @post.description %></p>
-<p><%= @post.photo %></p>
-<br>
+<header class="jumbotron my-5 text-center">
+  <h1 class="display-2">THE MOST LIKE</h1>
+  <p class="lead">Only the best post with great content hand-picked by the community</p>
+</header>
+
+<div class="container">
+<h2 class="text-center"><%= @post.name %></h2>
+<div class="row justify-content-center">
+  <div class="col-xs-6 like-views float-left"><small>LIKE 12937</small></div>
+  <div class="col-xs-6 like-views float-right"><small>LIKE 12937</small></div>
+</div>
+
+</div>
+
+
+<div class="container">
+  <div class="row post-single">
+    <div class="col-xs-12 col-md-6">
+      <div class="card">
+        <%= @post.photo %>
+        <div class="card-body">
+          <p class="card-text"><%= @post.description %></p>
+          <div class=" d-flex justify-content-between">
+            <small>Posted September 10, 1983</small>
+            <small>Like | Dislike</small>
+          </div>
+          <br>
+          <form>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Comment</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+              <button type="submit" class="btn btn-primary float-right btn-sm">Submit</button>
+              <small>160</small>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-5">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-title text-center">Comments</p>
+          <div class="row">
+            <div class="col-2">IMG</div>
+            <div class="col-10">
+              <small>With supporting text below as a natural lead-in to additional content.</small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">IMG</div>
+            <div class="col-10">
+              <small>With supporting text below as a natural lead-in to additional content.</small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">IMG</div>
+            <div class="col-10">
+              <small>With supporting text below as a natural lead-in to additional content.</small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">IMG</div>
+            <div class="col-10">
+              <small>With supporting text below as a natural lead-in to additional content.</small>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
 <%= link_to "edit", edit_post_path(@post) %>
 <%= link_to "delete", post_path(@post), method: :delete %>

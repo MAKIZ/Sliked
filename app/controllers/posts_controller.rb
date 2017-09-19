@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :load_post, only: [:edit, :update, :destroy]
+
   def index
     @posts = Post.all
   end
@@ -16,7 +18,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(create_params)
+    @post.user = current_user
 
     if @post.save
       redirect_to @post
@@ -43,8 +46,15 @@ class PostsController < ApplicationController
 
   private
 
-  def post_params
+  def create_params
     params.require(:post).permit(:name, :description, :photo)
   end
 
+  def post_params
+    params.require(:post).permit(:name, :description)
+  end
+
+  def load_post
+    @post = current_user.posts.find(params[:id])
+  end
 end

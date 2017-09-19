@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <%= link_to "Slicked", root_path, class: "navbar-brand" %>
+    <%= link_to "Slicked", posts_path, class: "navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -18,14 +18,15 @@
       <li class="nav-item">
           <a class="nav-link" href="#">Dislike</a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">User<span class="sr-only">(current)</span></a>
+      <li class="nav-item active"> 
+        <%= link_to "User", users_path, class: "nav-link" %>
+        <span class="sr-only">(current)</span>
       </li>
       <% if current_user %>
       <li class="nav-item">
         <%= link_to "Log out", session_path, method: :delete, class: "nav-link" %>
-      <span class="sr-only">(current)</span>
-    </li>
+        <span class="sr-only">(current)</span>
+      </li>
     <% else %>
       <li class="nav-item">
         <%= link_to 'Sign Up', new_user_path, class: "nav-link" %>
@@ -33,8 +34,8 @@
       </li>
       <li class="nav-item">
         <%= link_to "Log In", new_session_path, class: "nav-link" %>
-      <span class="sr-only"></span>
-    </li>
+        <span class="sr-only"></span>
+      </li>
     <% end %>
     </ul>
   </div>

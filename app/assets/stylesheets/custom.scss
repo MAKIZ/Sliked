@@ -17,11 +17,29 @@
 
 //signin
 .signin-wrapper {
-margin-top: 60px;
-padding: 80px 50px;
+margin-top: 20px;
+padding: 60px 50px;
 }
 
 //signup
 .signup-wrapper {
-padding: 80px 50px;
+padding: 60px 50px;
+}
+
+.post-single {
+  padding: 30px;
+  display: flex;
+  justify-content: center
+}
+
+.like-views {
+  padding: 0 20px;
+}
+
+.gold {
+  background-color: gold;
+}
+
+.tomato {
+  background-color: tomato;
 }

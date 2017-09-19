@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :posts
   PASSWORD_LENGTH = (6..25)
   validates :password, length: PASSWORD_LENGTH, allow_nil: true
 
