@@ -58,25 +58,6 @@ padding: 60px 50px;
   margin: 10px;
 }
 
-//for test only
-
-.teal {
-  background-color: teal;
-}
-
-.khaki {
-  background-color: khaki;
-  // padding: 20px;
-}
-
-.gold {
-  background-color: gold;
-}
-
-.tomato {
-  background-color: tomato;
-}
-
 .circle {
   width: 100px;
   height: 100px;
@@ -97,6 +78,11 @@ padding: 60px 50px;
   font-size: .7rem;
 }
 
+// navigation
 li a {
   font-size: .8rem;
+}
+
+small a {
+  color: rgb(60, 60, 60);
 }
