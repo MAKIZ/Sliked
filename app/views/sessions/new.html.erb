@@ -5,7 +5,6 @@
       <p>Raclette etsy activated charcoal, typewriter organic tbh kale chips freegan hot chicken drinking vinegar tumblr occupy. PBR&B snackwave pug, blue bottle fixie asymmetrical fam hot chicken ramps. </p>
     </div>
     <div class="col-xs-12 col-md-5">
-      <!-- <form> -->
       <%= form_for :user, url: session_path do |f| %>
       <div class="form-group">
           <%= f.label :email, placeholder: 'Email', required: true %>
@@ -19,7 +18,6 @@
       <%= f.submit class: "btn btn-primary float-right", value: "Submit" %>
       <small class="form-text text-muted">Forgot Password?</small>
       <% end %>
-        <!-- </form> -->
     </div>
   </div>
 </div>

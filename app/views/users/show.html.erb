@@ -1,21 +1,66 @@
-<p><%= @user.name %></p>
-<p><%= @user.email %></p>
-<p><%= @user.occupation %></p>
-<p><%= @user.location %></p>
-
-<div class="container pt-5">
-    <div class="card-columns">
-      <% @user.posts.each do |post| %>
-      <div class="card">
-        <%= image_tag post.postimage.url, class: "img-fluid d-block mx-auto" %>
-        <div class="card-body">
-          <%= link_to  "#{post.name}", post, class: "card-title" %>
-          <p class="card-text"><%= post.description %></p>
-          <hr>
-          <small><%= post.user.name %></small>
-  
+<header class="humbotron-user-info text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xs-12 col-md-3">
+        <div class="row">
+          <div class="container pt-2">
+            <small class="d-block lead text-sm-left text-xs-center"><%= @user.name %></small>
+          </div>
+          <div class="col justify-content-center">
+            <div class="circle d-block"></div>
+          </div>  
+          <div class="col pt-3">
+            <div class="d-block text-left">Follow</div>
+            <small class="d-block text-left">Web Developer</small>
+            <small class="d-block text-sm-left text-xs-center text-muted">NY, New York</small>
+          </div>
         </div>
       </div>
-      <% end %>
+      <div class="col-xs-12 col-md-9 d-flex">
+        <div class="row mt-2">
+          <div class="sm-box">
+            <p class="text-muted">Likes</p>
+            <hr>
+            <p>12378</p>
+          </div>
+          <div class="sm-box">
+              <p class="text-muted">Posts</p>
+              <hr>
+              <p>12378</p>
+            </div>
+          <div class="sm-box">
+              <p class="text-muted">Follower</p>
+              <hr>
+              <p>12378</p>
+          </div>
+          <div class="sm-box">
+            <p class="text-muted">Following</p>
+            <hr>
+            <p>12378</p>
+          </div>
+          <div class="sm-box">
+            <p class="text-muted">Dislikes</p>
+            <hr>
+            <p>12378</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</header>
+
+<div class="container pt-5">
+  <div class="card-columns">
+    <% @user.posts.each do |post| %>
+    <div class="card">
+      <%= image_tag post.postimage.url, class: "img-fluid d-block mx-auto" %>
+      <div class="card-body">
+        <%= link_to  "#{post.name}", post, class: "card-title" %>
+        <p class="card-text"><%= post.description %></p>
+        <hr>
+        <small><%= link_to post.user.name, user_path(post.user.id) %></small>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
